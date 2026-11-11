@@ -1,0 +1,50 @@
+.yt-scroll-volume-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 22px;
+
+    background: rgba(15, 15, 20, 0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+
+    color: white;
+    font-family: Arial, sans-serif;
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+    z-index: 9999;
+
+    transition:
+        opacity 180ms ease,
+        transform 180ms ease,
+        visibility 180ms ease;
+}
+
+.yt-scroll-volume-indicator.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.yt-scroll-volume-icon {
+    font-size: 24px;
+}
+
+.yt-scroll-volume-value {
+    font-size: 20px;
+    font-weight: 600;
+    min-width: 48px;
+    text-align: center;
+}

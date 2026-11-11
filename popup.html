@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Scroll Volume</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 280px;
+            margin: 0;
+            padding: 20px;
+            background: #111116;
+            color: #eeeeF5;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            margin: 6px 0 20px;
+            color: #858592;
+            font-size: 11px;
+        }
+
+        .setting {
+            margin-bottom: 20px;
+        }
+
+        .setting-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        label {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .value {
+            color: #a78bfa;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #30303b;
+            border-radius: 7px;
+            background: #1c1c25;
+            color: #eeeeF5;
+            outline: none;
+            cursor: pointer;
+        }
+
+        select:focus {
+            border-color: #8b5cf6;
+        }
+
+        .toggle-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        input[type="checkbox"] {
+            width: 17px;
+            height: 17px;
+            accent-color: #8b5cf6;
+            cursor: pointer;
+        }
+
+        .footer {
+            margin-top: 20px;
+            padding-top: 12px;
+            border-top: 1px solid #30303b;
+            color: #777783;
+            font-size: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>YouTube Scroll Volume</h1>
+    <p class="subtitle">Customize your volume controls</p>
+
+    <div class="setting">
+        <div class="setting-header">
+            <label for="volumeStep">Volume increment</label>
+            <span class="value" id="volumeValue">5%</span>
+        </div>
+
+        <select id="volumeStep">
+            <option value="0.01">1%</option>
+            <option value="0.02">2%</option>
+            <option value="0.05">5%</option>
+            <option value="0.10">10%</option>
+        </select>
+    </div>
+
+    <div class="setting">
+        <div class="setting-header">
+            <label for="indicatorDuration">Indicator duration</label>
+            <span class="value" id="durationValue">1 second</span>
+        </div>
+
+        <select id="indicatorDuration">
+            <option value="500">0.5 seconds</option>
+            <option value="1000">1 second</option>
+            <option value="1500">1.5 seconds</option>
+            <option value="2000">2 seconds</option>
+        </select>
+    </div>
+
+    <div class="setting toggle-row">
+        <label for="showIndicator">Show volume indicator</label>
+        <input type="checkbox" id="showIndicator" checked>
+    </div>
+
+    <div class="footer">
+        YouTube Scroll Volume · Version 1.0.0
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
