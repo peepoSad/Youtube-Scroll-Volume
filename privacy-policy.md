@@ -1,3 +1,4 @@
+
 # Privacy Policy — YouTube Scroll Volume
 
 **Last updated:** November 10, 2026
